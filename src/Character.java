@@ -7,11 +7,7 @@ public abstract class Character implements Creature {
     }
     public abstract void attack(Character target);
     public final boolean isAlive(){
-        boolean alive = false;
-        if(hp > 0){
-            alive = true;
-        }
-        return alive;
+        return this.hp > 0;
     }
     public void showStatus(){
         System.out.println(this.name + ": HP " + this.hp);
